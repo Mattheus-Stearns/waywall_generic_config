@@ -422,7 +422,7 @@ return function(cfg, remaps)
                     os.execute('echo "0x0" > ~/.resetti_state')
                     waywall.sleep(17)
                 end
-                waywall.set_resolution(0, 0)
+                waywall.set_resolution(cfg.resolution[1], cfg.resolution[2])
                 disable()
             else
                 if cfg.enable_resize_animations then
@@ -494,6 +494,10 @@ return function(cfg, remaps)
             end
         end),
 
+        [cfg.launch_advancely_key] = chat_mode_helper(function()
+            waywall.exec("advancely --overlay")
+        end),
+
         [cfg.toggle_ninbot_key] = chat_mode_helper(function()
             if not is_ninb_running() then
                 waywall.exec("java -Dawt.useSystemAAFontSettings=on -jar " .. nb_path)
@@ -556,6 +560,7 @@ return function(cfg, remaps)
                 "Tall = " .. cfg.tall.key .. "\n" ..
                 "Toggle Ninbot = " .. cfg.toggle_ninbot_key .. "\n" ..
                 "Launch paceman = " .. cfg.launch_paceman_key .. "\n" ..
+                "Launch Advancely = " .. cfg.launch_advancely_key .. "\n" ..
                 "Fullscreen = " .. cfg.toggle_fullscreen_key .. "\n" ..
                 "Chat Mode = " .. cfg.toggle_remaps_key .. "\n"
                 ,

@@ -56,6 +56,7 @@ If you have a 1440p monitor, add this argument to the clone command `-b 1440`
 - Choose whether resolution changes activate while paused or in a menu with `ingame_only` (useful for search crafting with those keys)
 - If you wish to not use a key, bind it to a key combo you won't press rather than deleting/commenting it out
 - `toggle_ninbot_key` is how you can show/hide Ninjabrain Bot, the visibility option built in won't work in Waywall
+- `launch_advancely_key` runs `advancely --overlay` (default: `Shift-Tab`)
 - `toggle_remaps_key` enables chat mode and toggles your keyboard layout and remaps off and on
 
 5. Keyboard

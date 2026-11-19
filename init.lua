@@ -4,7 +4,7 @@ local main = require("main")
 local remaps = require("remaps")
 
 local cfg = {
-    debug_text = true,
+    debug_text = false,
 
     -- ==== LOOKS ====
     resolution = { 1920, 1080 },
@@ -17,7 +17,7 @@ local cfg = {
     pie_chart_3 = "#E446C4",
 
     ninbot_anchor = {
-        position = "topright", -- topleft, top, topright, left, right, bottomleft, bottomright
+        position = "right", -- topleft, top, topright, left, right, bottomleft, bottomright
         x = 0,
         y = 130,               -- offset
     },
@@ -36,8 +36,8 @@ local cfg = {
     thin_pie = { enabled = true, x = 1200, y = 400, size = 4, colorkey = false }, -- Turning off colorkeying also maintains the original pie chart's dimensions and shows the percentages
     tall_pie = { enabled = true, x = 1200, y = 400, size = 4, colorkey = false }, -- Leave same as thin for seamlessness
 
-    thin_percent = { enabled = false, x = 1300, y = 850, size = 6 },
-    tall_percent = { enabled = false, x = 1300, y = 850, size = 6 }, -- Leave same as thin for seamlessness
+    thin_percent = { enabled = true, x = 1300, y = 850, size = 6 },
+    tall_percent = { enabled = true, x = 1300, y = 850, size = 6 }, -- Leave same as thin for seamlessness
     percentages_match_text = false,                                  -- Enabling this makes the percentages match the text color rather than the pie colors
 
 
@@ -50,12 +50,13 @@ local cfg = {
     -- ==== MACROS ====
     -- resolution changes
     thin = { key = "*-Alt_L", f3_safe = false, ingame_only = true },
-    wide = { key = "*-B", f3_safe = true, ingame_only = true },
+    wide = { key = "*-Q", f3_safe = true, ingame_only = true },
     tall = { key = "*-F4", f3_safe = false, ingame_only = false },
 
     -- startup actions
     toggle_fullscreen_key = "Shift-O",
     launch_paceman_key = "Shift-P",
+    launch_advancely_key = "Shift-Tab",
 
     -- during game actions
     toggle_ninbot_key = "*-apostrophe",
@@ -74,7 +75,7 @@ local cfg = {
 
 
     -- ==== MISC ====
-    sens_change = { enabled = false, normal = 1.0, tall = 0.1 },
+    sens_change = { enabled = true, normal = 6.7, tall = 0.15 },
     enable_resize_animations = false,
 
 }
